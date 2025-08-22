@@ -121,4 +121,51 @@ def add_text(text1,text2):
 result = add_text('今日も','一日お疲れ様！')
 print(result)
 
-#練習用　整数を引数として受け取り、その数が奇数であれば True を、そうでなければ False を返す関数 is_odd を定義し、is_odd(7) の結果を変数に代入して表示してください。
+#練習用　2つの数値を引数として受け取り、その合計を返す関数 add_numbers を定義し、その結果を変数に代入して表示してください。
+def add_numbers(a,b):
+    answer = (a + b)
+    return answer
+result = add_numbers(5,120)
+print(result)
+
+#練習用　2つの数値を引数として受け取り、1つ目の数値から2つ目の数値を引いた差を返す関数 subtract_numbers を定義し、その結果を変数に代入して表示してください。
+def subtract_numbers(c,d):
+    answer = (c - d)
+    return answer
+result = subtract_numbers(10,5)
+print(result)
+
+#練習用　2つの数値を引数として受け取り、その積を返す関数 multiply_numbers を定義し、その結果を変数に代入して表示してください。
+def multiply_numbers(e,f):
+    answer = (e * f)
+    return answer
+result = multiply_numbers(3,9)
+print(result)
+
+#練習用　2つの数値を引数として受け取り、1つ目の数値を2つ目の数値で割った商を返す関数 divide_numbers を定義し、その結果を変数に代入して表示してください。
+def divide_number(a,b):
+    answer = (a / b)
+    return answer
+result = divide_number(9,3)
+print(result)
+
+#練習用　名前と年齢を引数として受け取り、「私は〇〇です。〇〇歳です。」という自己紹介メッセージを返す関数 introduce_yourself を定義し、その結果を変数に代入して表示してください。
+def introduce_yourself(name,age):
+    massage = ('私は' + name + 'です。' + str(age) + '歳です。')
+    return massage
+result = introduce_yourself('えりんこ', 38)
+print(result)
+
+#練習用　名前と趣味を引数として受け取り、「私は〇〇です。趣味は〇〇です。」という自己紹介メッセージを返す関数 my_hobby を定義し、その結果を変数に代入して表示してください。
+def my_hobby(name,hobby):
+    message = ('私は' + name + 'です。' + '趣味は' + hobby + 'です。')
+    return message
+result = my_hobby('えりんこ','フラダンス')
+print(result)
+
+#練習用　好きな食べ物を引数として受け取り、「私の好きな食べ物は〇〇です。」というメッセージを返す関数 favorite_food を定義し、その結果を変数に代入して表示してください。
+def favorite_food(food):
+    message = ('私の好きな食べ物は'+ food + 'です。')
+    return message
+result = favorite_food('小籠包')
+print(result)
