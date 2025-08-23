@@ -256,3 +256,22 @@ def profile(name,age):
     return pro
 result = profile('えりんこ',39)
 print(result)
+
+#練習用　引数として好きな色を受け取り、「好きな色は〇〇です。」と表示する関数 favorite_color を定義し、呼び出してください。
+def favorite_color(color):
+    print('好きな色は' + color + 'です。')
+favorite_color('yellow')
+
+#練習用　2つの数値を引数として受け取り、それらを割り算して結果を戻り値として返す関数 divide_numbers を定義し、その結果を変数に代入して表示してください。
+def divide_numbers(a,b):
+    answer = (a / b)
+    return answer
+result = divide_numbers(200,100)
+print(result)
+
+#練習用　2つの文字列を引数として受け取り、それらを結合して「〇〇＋〇〇」の形式で表示する関数 join_strings を定義し、呼び出してください。
+def join_strings(text1,text2):
+    words = text1 + '+' + text2
+    return words
+two_words = join_strings('高さ','横')
+print(two_words)
