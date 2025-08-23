@@ -169,3 +169,90 @@ def favorite_food(food):
     return message
 result = favorite_food('小籠包')
 print(result)
+
+#練習用「10+5=15」と表示する関数 print_sum を定義し、呼び出してください。
+def print_sum():
+    print('10+5=15')
+print_sum()
+
+#練習用「こんにちは、世界！」と表示する関数 say_hello を定義し、呼び出してください。
+def say_hello():
+    print('こんにちは、世界！')
+say_hello()
+
+#できなかった！練習用　引数として2つの数値をを受け取り、その合計を「〇+〇=〇」の形式で表示する関数 print_calculation を定義し、呼び出してください。
+def print_calculation(a,b):
+    add_answer = (a + b)
+    print( str(a) + '+' + str(b) + '=' + str(add_answer) )
+print_calculation(5,10)
+
+#練習用　引数として2つの数値をを受け取り、その合計を返す関数 get_sum を定義し、その結果を変数に代入して表示してください。
+def get_sum(a,b):
+    answer = (a + b)
+    return answer
+result = get_sum(5,100)
+print(result)
+
+#練習用　引数として名前と年齢を受け取り、「私は〇〇です。〇〇歳です。」という自己紹介メッセージを返す関数 create_intro を定義し、その結果を変数に代入して表示してください。
+def create_intro(name,age):
+    intro_yourself = ('私は' + name + 'です。' + str(age) + '歳です。')
+    return intro_yourself
+result = create_intro('えりんこ',39)
+print(result)
+
+def create_intro(name,age):
+    print('私は' + name + 'です。' + str(age) + '歳です。')
+create_intro('えりんこ',39)
+
+#練習用「プログラミングは楽しい！」と表示する関数 programming_fun を定義し、呼び出してください。
+def programming_fun():
+    print('プログラミングは楽しい！')
+programming_fun()
+
+#練習用　引数として好きな飲み物を受け取り、「今日の飲み物は〇〇です。」と表示する関数 todays_drink を定義し、呼び出してください。
+def todays_drink(drink):
+    print('今日の飲み物は' + drink + 'です。')
+todays_drink('ブラックコーヒー')
+
+#練習用　2つの数値を引数として受け取り、それらを足し算して結果を戻り値として返す関数 add_numbers を定義し、その結果を変数に代入して表示してください。
+def add_numbers(a,b):
+    sum_numbers = (a + b)
+    return sum_numbers
+result = add_numbers(10,50)
+print(result)
+
+#練習用　引数として2つの文字列を受け取り、それらを結合して「〇〇＋〇〇」の形式で表示する関数 join_strings を定義し、呼び出してください。
+def join_strings(word1,word2):
+    print(word1 + word2)
+join_strings('今日は','晴れ')
+
+#練習用　引数として好きな数値を受け取り、その数値を2乗して結果を戻り値として返す関数 square_number を定義し、その結果を変数に代入して表示してください。
+def square_number(a):
+    answer = ( a * a )
+    return answer
+result = square_number(4)
+print(result)
+
+#練習用　「晴れの日！」と表示する関数 sunny_day を定義し、呼び出してください。
+def sunny_day():
+    print('晴れの日！')
+sunny_day()
+
+#練習用　引数として好きな色を受け取り、「好きな色は〇〇です。」と表示する関数 favorite_color を定義し、呼び出してください。
+def favorite_color(color):
+    print('好きな色は' + color + 'です。')
+favorite_color('イエロー')
+
+#練習用　2つの数値を引数として受け取り、それらを割り算して結果を戻り値として返す関数 divide_numbers を定義し、その結果を変数に代入して表示してください。
+def divide_number(a,b):
+    answer = (a / b)
+    return answer
+result = divide_number(10,5)
+print(result)
+
+#練習用　引数として名前と年齢を受け取り、「〇〇は〇〇歳です。」というメッセージを文字列として戻り値で返す関数 profile を定義し、その結果を変数に代入して表示してください。
+def profile(name,age):
+    pro = ( name + 'は' + str(age) + '歳です。')
+    return pro
+result = profile('えりんこ',39)
+print(result)
