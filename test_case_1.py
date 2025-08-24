@@ -275,3 +275,86 @@ def join_strings(text1,text2):
     return words
 two_words = join_strings('高さ','横')
 print(two_words)
+
+#問題③
+def greet_person(name,age):
+    intro_yourself = ('私の名前は' + name + 'です。' + str(age) + '歳です。')
+    return intro_yourself
+result = greet_person('えりんこ',39)
+print(result)
+
+def greet_person(name,age):
+    intro_yourself = f'私の名前は{name}です。{age}歳です。'
+    return intro_yourself
+result = greet_person('えりんこ',39)
+print(result)
+
+#練習用　引数として**city (都市名)とweather (天気)**を受け取り、「今日の〇〇の天気は〇〇です。」という形式の文字列を返す関数 report_weather を作成してください。
+def report_weather(city,weather):
+    message = f'今日の{city}天気は{weather}です。'
+    return message
+result = report_weather('ハワイ','晴れ')
+print(result)
+
+#練習用 引数として**product (商品名)とprice (価格)**を受け取り、「〇〇の価格は〇〇円です。」という形式の文字列を返す関数 get_price を作成してください。
+def get_price(product,price):
+    message = f'{product}の価格は{price}円です。'
+    return message
+result = get_price('ロコモコ',10000)
+print(result)
+
+#練習用　引数として**base (底辺)とheight (高さ)**を受け取り、三角形の面積を計算し、「底辺〇〇、高さ〇〇の三角形の面積は〇〇です。」という形式の文字列を返す関数 calculate_area を作成してください。
+def calculate_area(base,height):
+    message = f'底辺{base}、高さ{height}の三角形の面積は{base * height / 2}です。'
+    return message
+result = calculate_area(50,50)
+print(result)
+
+#練習用　引数として**year (年)とmonth (月)**を受け取り、「〇〇年〇〇月のイベント情報」という形式の文字列を返す関数 get_event_info を作成してください。
+def get_event_info(year,month):
+    message = f'{year}年{month}月のイベント情報'
+    return message
+result = get_event_info(2025,10)
+print(result)
+
+#練習用　引数として**movie_title (映画タイトル)とdirector (監督名)**を受け取り、「映画『〇〇』の監督は〇〇です。」という形式の文字列を返す関数 get_movie_info を作成してください。
+def get_movie_info(movie_title,director):
+    message = f'映画『{movie_title}』の監督は{director}です。'
+    return message
+result = get_movie_info('50回目のファーストキス','福田雄一')
+print(result)
+
+#練習用　引数として**student_name (学生名)とgrade (成績)**を受け取り、「〇〇さんの成績は〇〇点でした。」という形式の文字列を返す関数 show_grade を作成してください。
+def show_grade(student_name,grade):
+    message = f'{student_name}さんの成績は{grade}点でした。'
+    return message
+result = show_grade('えりんこ',100)
+print(result)
+
+#練習用　引数として**book_title (本のタイトル)とauthor (著者名)**を受け取り、「『〇〇』の著者は〇〇です。」という形式の文字列を返す関数 get_book_details を作成してください。
+def get_book_details(book_title,author):
+    message = f'『{book_title}』の著者は{author}です。'
+    return message
+result = get_book_details('お金の大学','両学長')
+print(result)
+
+#練習用　引数として**color (色)とfruit (果物)**を受け取り、「〇〇色の果物は〇〇です。」という形式の文字列を返す関数 describe_fruit を作成してください。
+def describe_fruit(color,fruit):
+    message = f'{color}色の果物は{fruit}です。'
+    return message
+result = describe_fruit('黄','パイナップル')
+print(result)
+
+#練習用　引数として**food_name (料理名)とcuisine (ジャンル)**を受け取り、「〇〇は〇〇料理です。」という形式の文字列を返す関数 get_food_genre を作成してください。
+def get_food_genre(food_name,cuisine):
+    message = f'{food_name}は{cuisine}料理です。'
+    return message
+result = get_food_genre('ロコモコ','ハワイ')
+print(result)
+
+#練習用　引数として**start_time (開始時刻)とend_time (終了時刻)**を受け取り、「会議は〇〇時から〇〇時までです。」という形式の文字列を返す関数 get_meetingを作成してください。
+def get_meeting(start_time,end_time):
+    message = f'会議は{start_time}時から{end_time}時までです。'
+    return message
+result = get_meeting(9,12)
+print(result)
