@@ -438,3 +438,27 @@ def add_animals(new_animals):
     animals.extend(new_animals)
 add_animals(["パンダ","コアラ"])
 print(animals)
+
+#次のリストがあります。names = ["たろう", "はなこ"]
+#新しい名前 "じろう" をリストの末尾に追加する関数 add_name(new_name) を作ってください。関数を使って名前を追加し、リストの中身をすべて表示してください。
+names = ["たろう","はなこ"]
+def add_name(new_name):
+    names.extend(new_name)
+add_name(["じろう"])
+print(names)
+
+#次のリストがあります。items = ["本", "ペン", "ノート"]新しいアイテム "消しゴム" をリストの末尾に追加する関数 add_item(new_item) を作ってください。
+#関数を使ってアイテムを追加し、リストの中身をすべて表示してください。
+items = ["本","ペン","ノート"]
+def add_items(new_item):
+    items.extend(new_item)
+add_items(["消しゴム"])
+print(items)
+
+#次のリストがあります。numbers = [10, 20, 30]新しい数値 40 をリストの末尾に追加する関数 add_number(new_number) を作ってください。
+#関数を使って数値を追加し、リストの中身をすべて表示してください。
+items = [10,20,30]
+def add_number(new_number):
+    items.extend(new_number)
+add_number([40])
+print(items)
