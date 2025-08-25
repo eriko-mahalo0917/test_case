@@ -462,3 +462,11 @@ def add_number(new_number):
     items.extend(new_number)
 add_number([40])
 print(items)
+
+#次のリストがあります。names = ["たろう", "はなこ"]
+#3つのリスト["じろう"]、["さぶろう"]、["ごろう"]をそれぞれ順番にリストnamesに追加する関数 add_namesを作ってください。関数を使って名前を追加し、リストの中身をすべて表示してください。
+names = ["たろう", "はなこ"]
+def add_names(new_names):
+    names.extend(new_names)
+add_names(["じろう","さぶろう","ごろう"])
+print(names)
