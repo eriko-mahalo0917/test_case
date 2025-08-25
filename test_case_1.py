@@ -358,3 +358,83 @@ def get_meeting(start_time,end_time):
     return message
 result = get_meeting(9,12)
 print(result)
+
+#練習用　引数として好きな色を受け取り、「好きな色は〇〇です。」と表示する関数 favorite_color を定義し、呼び出してください。
+def favorite_color(color):
+    print(f'好きな色は{color}です。')
+favorite_color('黄色')
+
+#練習用　2つの数値を引数として受け取り、それらを割り算して結果を戻り値として返す関数 divide_numbers を定義し、その結果を変数に代入して表示してください。
+def divide_numbers(a,b):
+    get_answer = a / b
+    return get_answer
+result = divide_number(25,5)
+print(result)
+
+#練習用　2つの文字列を引数として受け取り、それらを結合して「〇〇＋〇〇」の形式で表示する関数 join_strings を定義し、呼び出してください。
+def join_strings(text1,text2):
+    message = f'{text1}+{text2}'
+    return message
+result = join_strings('青','黄')
+print(result)
+
+#練習用　引数として名前を受け取り、「こんにちは、〇〇さん！」という挨拶メッセージをf-stringを使って返す関数 greet_hello を定義し、その結果を変数に代入して表示してください。
+def greet_hello(name):
+    message = f'こんにちは、{name}さん！'
+    return message
+result = greet_hello('えりんこ')
+print(result)
+
+#練習用　引数として2つの数値をを受け取り、その合計をf-stringを使って「〇＋〇＝〇」の形式で表示する関数 print_sumを定義し、呼び出してください。
+def print_sum(a,b):
+    sum_number = f'{a}+{b}={a+b}'
+    return sum_number
+result = print_sum(5,9)
+print(result)
+
+#【問題】names = ["たろう", "はなこ", "じろう"]
+names = ["たろう", "はなこ", "じろう"]
+def add_names(new_names):
+    names.extend(new_names)
+add_names(["さぶろう", "しろう", "ごろう"])
+print(names)
+
+#【問題】names = ["たろう", "はなこ", "じろう"]
+names = ["たろう", "はなこ", "じろう"]
+def add_names(new_names):
+    names.extend(new_names)
+add_names(["さぶろう", "しろう", "ごろう"])
+print(names)
+
+#次のリストがあります。colors = ["赤", "青", "緑"]練習問題 複数の色をまとめて受け取り、すべてリストに追加する関数 add_colors(new_colors) を作ってください。
+#関数を使って ["黄", "白", "黒"] を追加し、リストの中身をすべて表示してください。
+colors = ["赤", "青", "緑"]
+def add_colors(new_color):
+    colors.extend(new_color)
+add_colors(["黄","白","黒"])
+print(colors)
+
+#のリストがあります。numbers = [1, 2, 3] 複数の数値をまとめて受け取り、すべてリストに追加する関数 add_numbers(new_numbers) を作ってください。
+#関数を使って (4, 5, 6) を追加し、リストの中身をすべて表示してください。
+numbers = [1,2,3]
+def add_numbers(new_numbers):
+    numbers.extend(new_numbers)
+#リストに追加する！だから[]を忘れない！
+add_numbers([4,5,6])
+print(numbers)
+
+#次のリストがあります。fruits = ["りんご", "みかん", "バナナ"]
+#複数の果物をまとめて受け取り、すべてリストに追加する関数 add_fruits(new_fruits) を作ってください。関数を使って ("ぶどう", "いちご", "メロン") を追加し、リストの中身をすべて表示してください。
+fruits = ["りんご","みかん","バナナ"]
+def add_fruits(new_fruits):
+    fruits.extend(new_fruits)
+add_fruits(["ぶどう", "いちご", "メロン"])
+print(fruits)
+
+#次のリストがあります。animals = ["犬", "猫", "うさぎ"]
+#複数の動物をまとめて受け取り、すべてリストに追加する関数 add_animals(new_animals) を作ってください。関数を使って "パンダ" と "コアラ" を追加し、リストの中身をすべて表示してください。
+animals = ["犬","猫","うさぎ"]
+def add_animals(new_animals):
+    animals.extend(new_animals)
+add_animals(["パンダ","コアラ"])
+print(animals)
