@@ -470,3 +470,76 @@ def add_names(new_names):
     names.extend(new_names)
 add_names(["じろう","さぶろう","ごろう"])
 print(names)
+
+#次のリストがあります。data = ["A", "B"]3つのリスト["C"]、["D"]、["E"]をそれぞれ順番にリストdataに追加する関数 add_dataを作ってください。
+#関数を使ってデータを追加し、リストの中身をすべて表示してください。
+data = ["A","B"]
+def add_data(new_data):
+    data.extend(new_data)
+add_data(["C","D","E"])
+print(data)
+
+items = ["本", "ペン", "ノート"]
+def add_item(new_item):
+    items.extend(new_item)
+add_item(["消しゴム","えんぴつ"])
+print(items)
+
+#引数として好きな色を受け取り、「好きな色は〇〇です。」と表示する関数 favorite_color を定義し、呼び出してください。
+def favorite_color(color):
+    print(f'好きな色は{color}です。')
+favorite_color("黄色")
+
+#2つの数値を引数として受け取り、それらを割り算して結果を戻り値として返す関数 divide_numbers を定義し、その結果を変数に代入して表示してください。
+def divide_numbers(a,b):
+    answer = a / b
+    return answer
+result = divide_numbers(150,600)
+print(result)
+
+#names = ["たろう", "はなこ", "じろう"]　複数の名前をまとめて受け取り、すべてリストに追加する関数 add_names(new_names) を作ってください。
+#関数を使って ["さぶろう", "しろう", "ごろう"] を追加し、リストの中身をすべて表示してください。
+name = ["たろう", "はなこ", "じろう"]
+def add_name(new_names):
+    name.append(new_names)
+add_name(["さぶろう", "しろう", "ごろう"])
+print(name)
+
+#次のリストがあります。colors = ["赤", "青", "緑"]
+#複数の色をまとめて受け取り、すべてリストに追加する関数 add_colors(new_colors) を作ってください。関数を使って ["黄", "白", "黒"] を追加し、リストの中身をすべて表示してください。
+color = ["赤", "青", "緑"]
+def add_colors(new_colors):
+    color.append(new_colors)
+add_colors(["黄", "白", "黒"])
+print(color)
+
+#2つの数値を引数として受け取り、それらを掛け算して結果を戻り値として返す関数 multiply_numbers を作ってください。その関数を呼び出して、戻り値をターミナルに出力してください。
+def multiply_numbers(a,b):
+    answer = a * b
+    return answer
+result = multiply_numbers(7,9)
+print(result)
+
+#「こんにちは！」と表示する関数 say_hello を定義し、それを呼び出してください。
+def say_hello():
+    print("こんにちは！")
+say_hello()
+
+#引数として2つの数値をを受け取り、その合計を f-string を使って「〇＋〇＝〇」の形式で表示する関数 print_sum を定義し、呼び出してください。
+def print_sum (a,b):
+    print(f'{a}+{b}={a+b}')
+print_sum(5,5)
+
+#新しい動物 "パンダ" をリストの末尾に追加する関数 add_animal(new_animal) を作ってください。関数を使って名前を追加し、リストの中身をすべて表示してください。
+animals = ["犬", "猫", "うさぎ"]
+def add_animal(new_animal):
+    animals.append(new_animal)
+add_animal(["パンダ"])
+print(animals)
+
+#新しいデータ "テスト" をリストの末尾に追加する関数 add_data(new_data) を作ってください。関数を使ってデータを追加し、リストの中身をすべて表示してください。
+data = [10, 20, 30]
+def add_data(new_data):
+    data.append(new_data)
+add_data("テスト")
+print(data)
