@@ -543,3 +543,130 @@ def add_data(new_data):
     data.append(new_data)
 add_data("テスト")
 print(data)
+
+#①「ようこそ、プログラミングの世界へ！」と表示する関数 say_welcome を定義し、それを呼び出してください。
+def say_welcome():
+    print("ようこそ、プログラミングの世界へ！")
+say_welcome()
+
+#②「またのご利用をお待ちしております。」と表示する関数 say_farewell を定義し、それを呼び出してください。
+def say_farewell():
+    print("またのご利用をお待ちしております。")
+say_farewell()
+
+#③2つの数字を引数として受け取り、それらを足し算して結果を戻り値として返す関数 add_numbers を作ってください。この関数を呼び出して、戻り値を出力。ただし、関数の呼び出し例では 100 と 200 を使ってください。
+def add_numbers(a,b):
+    answer = a + b
+    return answer
+result = add_numbers(100,200)
+print(result)
+
+#2つの数字を引数として受け取り、それらを割り算して結果を戻り値として返す関数 divide_numbers を作ってください。この関数を呼び出して、戻り値をターミナルに出力.ただし、関数の呼び出し例では 50 と 5 を使ってください。
+def divide_numbers(a,b):
+    answer = a / b
+    return answer
+result = divide_numbers(50,5)
+print(result)
+
+#2つの引数 item（商品名）と price（価格）を受け取り、f文字列を使って「〇〇の価格は△△円です。」のような文を作る関数 create_item_message を作成してください。呼び出し例では "ノート" と 300 を使ってください。
+def reate_item_messa(item,price):
+    message = f'{item}の価格は{price}円です。'
+    return message
+result = reate_item_messa("ノート",300)
+print(result)
+
+#2つの引数 month（月）と event（イベント名）を受け取り、f文字列を使って「△月は〇〇の季節です。」のような文を作る関数 season_message を作成してください。関数を呼び出し. 呼び出し例では 8 と "花火" を使ってください。
+def season_message(month,event):
+    message = f'{month}月は{event}の季節です。'
+    return message
+result = season_message(8,"花火")
+print(result)
+
+fruits = ["りんご", "バナナ", "ぶどう"]
+def add_fruits(new_fruits):
+    fruits.append(new_fruits)
+add_fruits(["いちご", "みかん"])
+print(fruits)
+
+numbers = [1, 2, 3, 4]
+def remove_numbers(numbers_to_remove):
+    numbers.append(numbers_to_remove)
+remove_numbers([5, 6])
+print(numbers)
+
+#課題
+names = ["たろう", "はなこ", "じろう"]
+def add_names(new_names):
+    for name in new_names:
+        names.append(name)
+
+add_names(["さぶろう", "しろう", "ごろう"])
+for name in names:
+    print(name)
+
+#課題
+names = ["たろう", "はなこ", "じろう"]
+def add_names(new_names):
+    for name in new_names:
+        names.append(name)
+
+add_names(["さぶろう", "しろう", "ごろう"])
+for name in names:
+    print(name)
+
+#課題
+names = ["たろう", "はなこ", "じろう"]
+def add_names(new_names):
+    for name in new_names:
+        names.append(name)
+    
+add_names(["さぶろう", "しろう", "ごろう"])
+for name in names:
+    print(name)
+
+#課題
+members = ["山田", "佐藤", "鈴木"]
+def add_member(new_member):
+    for member in new_member:
+        members.append(member)
+
+add_member(["田中","高橋"])
+for member in members:
+    print(member)
+    
+fruits = ["りんご", "バナナ", "みかん"]
+def add_fruit(new_fruits):
+    for fruit in new_fruits:
+        fruits.append(fruit)
+
+add_fruit(["いちご", "ぶどう"])
+for fruit in fruits:
+    print(fruit)
+    
+planets = ["水星", "金星", "地球", "火星"]
+def add_planets(new_planets):
+    for planet in new_planets:
+        planets.append(planet)
+
+add_planets(["木星", "土星", "天王星"])
+for planet in planets:
+    print(planet)
+    
+foods = ["おにぎり", "パン", "サラダ"]
+def add_food(new_food):
+    for food in new_food:
+        foods.append(food)
+        
+add_food(["カレー","ラーメン"])
+for food in foods:
+    print(food)
+
+
+animals = ["犬", "猫", "鳥"]
+def add_animal(new_animal):
+    for animal in new_animal:
+        animals.append(animal)
+
+add_animal(["ペンギン","パンダ"])
+for animal in animals:
+    print(animal)
