@@ -670,3 +670,170 @@ def add_animal(new_animal):
 add_animal(["ペンギン","パンダ"])
 for animal in animals:
     print(animal)
+    
+#次のリストのすべての数を2倍にして、新しいリストとして返す関数 double_list(numbers) を作成してください。
+numbers = [1, 3, 5, 7]
+def double_list(numbers):
+#新しいリストを準備
+    double_number = []
+    for number in numbers:
+        double_number.append(number * 2)
+#このままでは処理結果を受け取れないからreturn
+    return double_number
+
+result = double_list(numbers)
+print(result)
+
+
+numbers = [1, 3, 5, 7]
+def double_number(number):
+    #新しいリストを準備
+    double_number_list = []
+    for number in numbers:
+        double_number = number * 2
+        double_number_list.append(double_number)
+    return double_number_list
+
+
+result = double_number(numbers)
+print(result)
+
+#次のリストのすべての要素を3倍にして、新しいリストとして返す関数 triple_list(numbers) を作成してください。
+numbers = [2, 4, 6, 8]
+def triple_list(numbers):
+    triple_number_list = []
+    for number in numbers:
+        triple_number = number * 3
+        triple_number_list.append(triple_number)
+    return triple_number_list
+
+
+result = triple_list(numbers)
+print(result)
+
+#次のリストのすべての要素から10を引いて、新しいリストとして返す関数 subtract_ten(numbers) を作成してください。
+numbers = [15, 20, 25, 30]
+def subtract_ten(numbers):
+    subtract_numbers_list = []
+    for number in numbers:
+        subtract_numbers = number - 10
+        subtract_numbers_list.append(subtract_numbers)
+    return subtract_numbers_list
+
+
+result = subtract_ten(numbers)
+print(result)
+
+#次のリストのすべての文字列の最後に "さん" を追加して、新しいリストとして返す関数 add_honorific(names) を作成してください。
+names = ["たなか", "さとう", "すずき"]
+def add_honorific(names):
+    honorific_name_list = []
+    for name in names:
+        honorific_name = name + "さん"
+        honorific_name_list.append(honorific_name)
+    return honorific_name_list
+
+result = add_honorific(names)
+print(result)
+
+#のリストのすべての文字列の最後に "さん" を追加して、新しいリストとして返す関数 add_san(names) を作成してください。
+names = ["たなか", "さとう", "すずき"]
+def add_san(names):
+    new_name_list = []
+    for name in names:
+        new_name = name + "さん"
+        new_name_list.append(new_name)
+    return new_name_list
+
+
+result = add_san(names)
+print(result)
+
+#次のリストのすべての数値に100を足して、新しいリストとして返す関数 add_hundred(numbers) を作成してください。
+numbers = [10, 20, 30]
+def add_hundred(numbers):
+    new_hundred_list = []
+    for number in numbers:
+        new_add_hundred = number + 100
+        new_hundred_list.append(new_add_hundred)
+    return new_hundred_list
+    
+result = add_hundred(numbers)
+print(result) 
+
+#次のリストのすべての数値を10倍にして、新しいリストとして返す関数 multiply_by_ten(numbers) を作成してください。
+numbers = [1, 2, 3, 4, 5]
+def multiply_by_ten(numbers):
+    new_numbers_list = []
+    for number in numbers:
+        new_number = number * 10
+        new_numbers_list.append(new_number)
+    return new_numbers_list
+
+result = multiply_by_ten(numbers)
+print(result)
+
+#次のリストのすべての数値から5を引いて、新しいリストとして返す関数 subtract_five(numbers) を作成してください。
+numbers = [10, 15, 20, 25]
+def subtract_five(numbers):
+    new_minus_list = []
+    for number in numbers:
+        minus_number = number - 5
+        new_minus_list.append(minus_number)
+    return new_minus_list
+        
+        
+result = subtract_five(numbers)
+print(result)
+
+#次のリストのすべての数値を2で割って、新しいリストとして返す関数 divide(nums) を作成してください。
+nums = [2, 4, 6, 8, 10]
+def divide(nums):
+    new_divide_list = []
+    for num in nums:
+        num_answer = num / 2
+        new_divide_list.append(num_answer)
+    return new_divide_list
+
+
+result = divide(nums)
+print(result)
+
+#次のリストのすべての数値から100を引いて、新しいリストとして返す関数 minus(numbers) を作成してください。
+numbers = [110, 120, 130, 140]
+def minus(numbers):
+    new_minus_list = []
+    for number in numbers:
+        minus_number = number - 100
+        new_minus_list.append(minus_number)
+    return new_minus_list
+
+
+result = minus(numbers)
+print(result)
+
+#次のリストのすべての数値を3倍にして、新しいリストとして返す関数 triple(numbers) を作成してください。
+numbers = [1, 5, 10, 15]
+def triple(numbers):
+    new_triple_list = []
+    for number in numbers:
+        new_triple_ans = number * 3
+        new_triple_list.append(new_triple_ans)
+    return new_triple_list
+
+
+result = triple(numbers)
+print(result)
+
+#次のリストのすべての数値に20を足して、新しいリストとして返す関数 add_twenty(numbers) を作成してください。
+numbers = [5, 10, 15, 20]
+def add_twenty(numbers):
+    new_twenty_list = []
+    for number in numbers:
+        add_twenty_ans = number + 20
+        new_twenty_list.append(add_twenty_ans)
+    return new_twenty_list
+
+
+result = add_twenty(numbers)
+print(result)
