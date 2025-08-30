@@ -837,3 +837,76 @@ def add_twenty(numbers):
 
 result = add_twenty(numbers)
 print(result)
+
+#次のリストに、新しい動物の名前をまとめて追加する関数 add_animals(new_animals) を作成してください。
+animals = ["犬", "猫"]
+def add_animals(new_animals):
+    for animal in new_animals:
+        animals.append(animal)
+    
+add_animals(["パンダ", "キリン", "ライオン"])
+
+for animal in animals:
+    print(animal) 
+    
+#次のリストに、新しい車の名前をまとめて追加する関数 add_cars(new_cars) を作成してください。
+cars = ["トヨタ", "ホンダ"]
+def add_cars(new_cars):
+    for car in new_cars:
+        cars.append(car)
+        
+add_cars(["日産", "マツダ", "スバル"])
+
+for car in cars:
+    print(car)
+    
+cars = ["トヨタ", "ホンダ"]
+def add_cars(new_cars):
+    cars.append(new_cars)
+    
+add_cars(['日産', 'マツダ', 'スバル'])
+print(cars)
+
+#次のリストのすべての数値を3乗して、新しいリストとして返す関数 triple_power(numbers) を作成してください。
+numbers = [2, 4, 6]
+def triple_power(numbers):
+    new_triple_list = []
+    for number in numbers:
+        triple_numbers = number * 3
+        new_triple_list.append(triple_numbers)
+    return new_triple_list
+
+
+result = triple_power(numbers)
+print(result)
+
+#次のリストのすべての文字列の先頭に「Hello, 」を追加して、新しいリストとして返す関数 greet_list(names) を作成してください。
+names = ["Alice", "Bob", "Charlie"]
+def greet_list(names):
+    new_greet_list = []
+    for name in names:
+        greet_word = "hello," + name
+        new_greet_list.append(greet_word)
+    return new_greet_list
+
+
+result = greet_list(names)
+print(result)
+
+
+names = ["たろう", "はなこ", "じろう"]
+def add_names_at_start(new_names):
+    for name in new_names:
+        names.append(name)
+        
+add_names_at_start(["さぶろう", "しろう", "ごろう"])
+print(names)
+
+
+numbers = [10, 20, 30]
+def add_numbers(new_numbers):
+    for number in new_numbers:
+        numbers.append(number)
+
+add_numbers([40, 50, 60])
+print(numbers)
