@@ -905,8 +905,104 @@ print(names)
 
 numbers = [10, 20, 30]
 def add_numbers(new_numbers):
+    #新しいリストを繰り返してもとのリストに追加
     for number in new_numbers:
         numbers.append(number)
 
+#追加されるリスト
 add_numbers([40, 50, 60])
 print(numbers)
+
+#総復習　「ありがとう！」と表示する関数 say_thank_you を作り、それを呼び出してください。
+def say_thank_you():
+    print("ありがとう")
+
+
+say_thank_you()
+
+
+#「がんばって！」と表示する関数 say_good_luck を作り、それを呼び出してください。
+def say_good_luck():
+    print("がんばって！")
+    
+    
+say_good_luck()
+
+#2つの数字を引数として受け取り、それらを足し算して結果を戻り値として返す関数を作りましょう。
+def add_numbers(x,y):
+    answer = x + y
+    return answer
+
+result = add_numbers(10,20)
+print(result)
+
+#2つの数字を引数として受け取り、それらを割り算して結果を戻り値として返す関数を作りましょう。
+def divide_numbers(num1,num2):
+    answer = num1 / num2
+    return answer
+
+result = divide_numbers(40,8)
+print(result)
+
+#2つの引数 item（商品名）と price（価格）を受け取り、f文字列（f-string）を使って「〇〇の価格は〇〇円です。」というあいさつ文を作る関数を作成してください。
+def display_price(item,price):
+    message = f'{item}の価格は{price}円です。'
+    return message
+
+result = display_price('リンゴ',150)
+print(result)
+
+#2つの引数 city（都市名）と weather（天気）を受け取り、f文字列（f-string）を使って「〇〇の今日の天気は〇〇です。」というあいさつ文を作る関数を作成してください。
+def display_weather(city,weather):
+    message = f'{city}の今日の天気は{weather}です。'
+    return message
+    
+result = display_weather("東京","晴れ")
+print(result)
+
+#与えられたリスト numbers に、複数の数字をまとめて追加する関数 add_numbers を作ってください。関数を使って [10, 20, 30] を追加し、リストの中身をすべて表示してください。
+numbers = [1, 2, 3]
+def add_numbers(new_number):
+    for number in new_number:
+        numbers.append(number)
+        
+add_numbers([10, 20, 30])
+print(numbers)
+
+#与えられたリスト fruits に、複数の果物の名前をまとめて追加する関数 add_fruits を作ってください。関数を使って ["バナナ", "ぶどう"] を追加し、リストの中身をすべて表示してください。
+fruits = ["りんご", "みかん"]
+def add_fruits(new_fruits):
+    for fruit in new_fruits:
+        fruits.append(fruit)
+        
+add_fruits( ["バナナ", "ぶどう"])
+print(fruits)
+
+#次のリストのすべての文字列の最後に「！」を加えて、新しいリストとして返す関数 add_exclamation を作成してください。
+words = ["こんにちは", "ありがとう", "さようなら"]
+def add_exclamation(new_message):
+    new_message_list = []
+    for word in words:
+        new_message_word = word + "!"
+        new_message_list.append(new_message_word)
+    return new_message_list
+    
+result = add_exclamation(words)
+print(result)
+
+#次のリストのすべての数を半分にして、新しいリストとして返す関数 half_list を作成してください。
+# 元のリスト
+numbers = [10, 20, 30, 40]
+def half_list(list_numbers):
+    #新しいリストだから新しい名前
+    new_half_list = []
+    #ここでは元のリストを使うから最初のリストを指定
+    for number in numbers:
+        get_half_number = number / 2
+        #ここで新しいリストに半分に割った数を追加するよ
+        new_half_list.append(get_half_number)
+    #出た値を受け取る
+    return new_half_list
+
+result = half_list(numbers)
+print(result)
