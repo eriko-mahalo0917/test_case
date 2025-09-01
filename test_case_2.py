@@ -127,3 +127,77 @@ def odd_numbers_list(number_list):
 
 result = odd_numbers_list([1, 3, 5, 7, 9])
 print(result)
+
+#空空のリスト months を用意してください。for 文を使って「Jan」「Feb」「Mar」を順に取得し、1つずつリストに追加してください。最後にリストの中身を表示してください。
+def print_months_list(month_list):
+    months = []
+    for month in month_list:
+        months.append(month)
+    return months
+
+
+result = print_months_list(["Jan","Feb","Mar"])
+print(result)
+
+#空のリスト scores_multiplied を用意してください。for 文を使って 10, 20, 30 を順に取得し、それぞれ2倍にした数を1つずつリストに追加してください。最後にリストの中身を表示してください。
+def scores_multiplied_list(multiplied_list):
+    scores_multiplied = []
+    for score in multiplied_list:
+        add_score = score * 2
+        scores_multiplied.append(add_score)
+    return scores_multiplied
+    
+result = scores_multiplied_list([10, 20, 30])
+print(result)
+
+#空のリスト greeting_messages を用意してください。for文を使って ["Hello", "Hi", "Good morning"] を順に取得し、
+#それぞれの文字列の最後に「, Python!」を加えて、1つずつリストに追加してください。最後にリストの中身を表示してください。
+def messages_list(message_word_list):
+    greeting_messages = []
+    for message in message_word_list:
+        add_message = message + ", Python!"
+        greeting_messages.append(add_message)
+    return greeting_messages
+
+
+result = messages_list(["Hello", "Hi", "Good morning"])
+print(result)
+
+
+#年齢を引数として受け取り、18歳以上なら「大人です」、そうでなければ「未成年です」と表示する関数 check_age(age) を作ってください。
+def check_age(age):
+    if age >= 18:
+        print("大人です")
+    else:
+        print("未成年です")
+        
+check_age(18)
+check_age(16)
+
+
+
+def check_age(age):
+    if age >= 18:
+        return "大人です"
+    else:
+        return "未成年です"
+    
+result = check_age(20)
+print(result)
+
+result = check_age(10)
+print(result)
+
+
+#点数を引数として受け取り、その点数が合格（60点以上）か不合格（60点未満）かを判断して表示する関数 check_score(score) を作ってください。
+def check_score(score):
+    if score >= 60:
+        return "合格"
+    else:
+        return "不合格"
+        
+result = check_score(60)
+print(result)
+
+result = check_score(50)
+print(result)
