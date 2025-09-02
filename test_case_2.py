@@ -182,10 +182,10 @@ def check_age(age):
     else:
         return "未成年です"
     
-result = check_age(20)
+check_age_result = check_age(20)
 print(result)
 
-result = check_age(10)
+check_age_result = check_age(10)
 print(result)
 
 
@@ -201,3 +201,31 @@ print(result)
 
 result = check_score(50)
 print(result)
+
+#数字を引数として受け取り、その数が偶数か奇数かを判断して表示する関数 check_even_or_odd(number) を作ってください。
+def check_even_or_odd(number):
+    if number % 2 == 0:
+        return "偶数"
+    else:
+        return "奇数"
+    
+    
+check_even_result = check_even_or_odd(6)
+print(check_even_result)
+
+check_odd_result = check_even_or_odd(5)
+print(check_odd_result)
+
+
+#文字列を引数として受け取り、その文字列が5文字以上か、5文字未満かを判断して表示する関数 check_spell(text) を作ってください。
+def check_spell(text):
+    if len(text) >= 5:
+        return "5文字以上"
+    else:
+        return "5文字未満"
+    
+check_spell_result = check_spell("ミセスグリーンアップル")
+print(check_spell_result)
+
+check_spell_result = check_spell("時計")
+print(check_spell_result)
