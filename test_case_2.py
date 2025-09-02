@@ -229,3 +229,63 @@ print(check_spell_result)
 
 check_spell_result = check_spell("時計")
 print(check_spell_result)
+
+#【問題文】点数を引数として受け取り、次の条件で判定する関数 judge_score(score) を作ってください。・80点以上 → 「優秀です」・60点以上80点未満 → 「合格です」・60点未満 → 「不合格です」
+def judge_score(score):
+    if score >= 80:
+        return "優秀です"
+    elif score >= 60:
+        return "合格です"
+    else:
+        return "不合格です"
+    
+    
+judge_score_result = judge_score(100)
+print(judge_score_result)
+
+judge_score_result = judge_score(79)
+print(judge_score_result)
+
+judge_score_result = judge_score(0)
+print(judge_score_result)
+
+
+#数字を引数として受け取り、その数が正の数、負の数、ゼロのどれかを判断して返す関数 check_number_type(number) を作ってください。
+def check_number_type(number):
+    if number > 0:
+        return "正の数"
+    elif number == 0:
+        return "ゼロ"
+    else:
+        return "負の数"
+    
+check_number_type_result = check_number_type(1)
+print(check_number_type_result)
+
+check_number_type_result = check_number_type(0)
+print(check_number_type_result)
+
+check_number_type_result = check_number_type(-1)
+print(check_number_type_result)
+
+
+#社員の勤続年数を引数として受け取り、その年数に応じて**「新入社員」（3年未満）、「中堅社員」（3年以上10年未満）、
+# 「ベテラン社員」**（10年以上）のどれかを判断して返す関数 check_staff_rank(years) を作ってください。
+
+def check_staff_rank(years):
+    if years < 3:
+        return "新入社員"
+    elif 3 <= years < 10:
+        return "中堅社員"
+    else:
+        return "ベテラン社員"
+
+
+check_staff_rank_result = check_staff_rank(2)
+print(check_staff_rank_result)
+
+check_staff_rank_result = check_staff_rank(5)
+print(check_staff_rank_result)
+
+check_staff_rank_result = check_staff_rank(10)
+print(check_staff_rank_result)
