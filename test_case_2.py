@@ -289,3 +289,200 @@ print(check_staff_rank_result)
 
 check_staff_rank_result = check_staff_rank(10)
 print(check_staff_rank_result)
+
+
+def judge_score(score):
+    excellent_comment = "優秀です"
+    good_comment = "合格です"
+    bad_comment = "不合格です"
+    
+    if score >= 80:
+        return excellent_comment
+    elif score >= 60:
+        return good_comment
+    else:
+        return bad_comment
+    
+judge_score_result = judge_score(80)
+print(judge_score_result)
+
+
+#数字を引数として受け取り、その数が偶数、奇数、ゼロのどれかを判断して返す関数 check_number_type(number) を作ってください。
+def check_number_type(number):
+    even_number_comment = "偶数"
+    odd_number_comment ="奇数"
+    zero_number_comment = "ゼロ"
+    
+    if number == 0:
+        return zero_number_comment
+    elif number % 2 == 0:
+        return odd_number_comment
+    else:
+        return even_number_comment
+    
+check_number_type_result = check_number_type(5)
+print(check_number_type_result)
+
+check_number_type_result = check_number_type(0)
+print(check_number_type_result)
+
+
+#時刻（hour）を引数として受け取り、その時刻が午前（6時から11時）、午後（12時から17時）、夜（18時から23時）、深夜（0時から5時）のどれかを判断して返す関数 get_time_of_day(hour) を作ってください。
+def get_time_of_day(hour):
+    am_time_comment = "午前"
+    after_time_comment = "午後"
+    night_time_comment = "夜"
+    mid_night_comment = "深夜"
+    
+    if  6 <= hour <= 11:
+        return am_time_comment
+    elif 12 <= hour <= 17:
+        return after_time_comment
+    elif 18 <= hour <= 23:
+        return night_time_comment
+    else:
+        return mid_night_comment
+    
+get_time_result = get_time_of_day(5)
+print(get_time_result)
+
+
+#数字を引数として受け取り、その数が3の倍数、5の倍数、どちらでもないのどれかを判断して返す関数 check_multiples(number) を作ってください。
+def check_multiples(number):
+    three_time_comment = "3の倍数"
+    five_time_comment = "５の倍数"
+    other_time_comment = "どちらでもない"
+    
+    if number % 3 == 0:
+        return three_time_comment
+    elif number % 5 == 0:
+        return five_time_comment
+    else:
+        return other_time_comment
+    
+check_multiples_result = check_multiples(4)
+print(check_multiples_result)
+
+#購入金額を引数として受け取り、条件に応じて割引の有無を判定する関数 check_discount(price) を作ってください。
+def check_discount(price):
+    #10000円以上は20%off
+    twenty_off_comment = "20%割引"
+    #5000円以上は１0%off
+    ten_off_comment = "10%割引"
+    #それ以外は割引なし！
+    proper_price_comment = "割引なし"
+    
+    if price >= 10000:
+        #20％offの割引価格
+        final_price = int(price * 0.8)
+        #最終価格と割引の適用はどれかを表示
+        return f'{final_price}円,{twenty_off_comment}'
+    elif price >= 5000:
+        #10％offの割引価格
+        final_price = int(price * 0.9)
+        return f'{final_price}円,{ten_off_comment}'
+    else:
+        return f'{price} 円,{proper_price_comment}'
+    
+check_discount_result = check_discount(10000)
+print(check_discount_result)
+
+
+def check_discount(price):
+    #10000円以上は20%off
+    twenty_off_comment = "20%割引"
+    #5000円以上は１0%off
+    ten_off_comment = "10%割引"
+    #それ以外は割引なし！
+    proper_price_comment = "割引なし"
+    
+    if price >= 10000:
+        return twenty_off_comment
+    elif price >= 5000:
+        return ten_off_comment
+    else:
+        return proper_price_comment
+    
+
+check_discount_result = check_discount(10000)
+print(check_discount_result)
+
+
+#10000円以上は20%off
+twenty_off_comment = "20%割引"
+#5000円以上は１0%off
+ten_off_comment = "10%割引"
+#それ以外は割引なし！
+proper_price_comment = "割引なし"
+
+def check_discount(price):   
+    if price >= 10000:
+        #20％offの割引価格
+        final_price = int(price * 0.8)
+        #最終価格と割引の適用はどれかを表示
+        return f'{final_price}円,{twenty_off_comment}'
+    elif price >= 5000:
+        #10％offの割引価格
+        final_price = int(price * 0.9)
+        return f'{final_price}円,{ten_off_comment}'
+    else:
+        return f'{price} 円,{proper_price_comment}'
+    
+check_discount_result = check_discount(10000)
+print(check_discount_result)
+
+#購入金額を引数として受け取り、条件に応じて割引の有無を判定する関数 check_discount(price) を作ってください。
+twenty_off_comment = "20%割引"
+ten_off_comment = "10%割引"
+proper_price_comment = "割引なし"
+
+def check_discount(price):
+    if price >= 10000:
+        final_price = int(price * 0.8)
+        return f'{final_price}円,{twenty_off_comment}'
+    elif price >= 5000:
+        final_price = int(price * 0.9)
+        return f'{final_price}円,{ten_off_comment}'
+    else:
+        f'{price}円,{proper_price_comment}'
+        
+check_discount_result = check_discount(6000)
+print(check_discount_result)
+
+#あなたは、レストランの料理の注文を管理しています。料理の数を引数として受け取り、注文の量に応じてサービスの有無を判定する関数 check_service(order_count) を作ってください。
+# 10皿以上 ➡️ 「ドリンクサービス」　 5皿以上10皿未満 ➡️ 「デザートサービス」　# 5皿未満 ➡️ 「サービスなし」
+
+ten_over_comment = "ドリンクサービス"
+five_over_comment = "デザートサービス"
+order_comment = "サービスなし"
+
+def check_service(order_count):
+    if order_count >= 10:
+        return f'{order_count}皿注文,{ten_over_comment}'
+    elif order_count >= 5:
+        return f'{order_count}皿注文,{five_over_comment}'
+    else:
+        return f'{order_count}皿注文,{order_comment}'
+    
+order_count_result = check_service(12)
+print(order_count_result)
+
+#購入金額を引数として受け取り、条件に応じて割引後の最終価格を計算して返す関数 online_price(price) を作ってください。
+#10,000円以上 ➡️ 15%割引 5,000円以上10,000円未満 ➡️ 5%割引 5,000円未満 ➡️ 割引なし
+
+fifteen_off_comment = "15%割引"
+five_off_comment = "5%割引"
+proper_price_comment = "割引なし"
+
+def online_price(price):
+    if price >= 10000:
+        final_price = int(price * 0.85)
+        return f'{final_price}円,{fifteen_off_comment}'
+    elif price >= 5000:
+        final_price = int(price * 0.95)
+        return f'{final_price}円,{five_off_comment}'
+    else:
+        return f'{price}円,{proper_price_comment}'
+    
+online_price_result = online_price(7500)
+print(online_price_result)
