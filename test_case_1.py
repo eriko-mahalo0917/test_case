@@ -1006,3 +1006,146 @@ def half_list(list_numbers):
 
 result = half_list(numbers)
 print(result)
+
+#「ありがとう！」と表示する関数 say_thanks を定義し、それを呼び出してください。
+def say_thanks():
+    print("ありがとう！")
+
+say_thanks()
+
+
+#「さようなら。」と表示する関数 say_goodbye を定義し、それを呼び出してください。
+def say_goodbye():
+    print("さようなら。")
+    
+say_goodbye()
+
+#2つの数字を引数として受け取り、それらを足し算して結果を戻り値として返す関数 add_numbers を作りましょう。
+#その関数を呼び出して、戻り値をターミナルに出力してください。呼び出すときは、10 と 20 を使ってください。
+def add_numbers(a,b):
+    add_answer = a + b
+    return add_answer
+
+add_answer_result = add_numbers(10,20)
+print(add_answer_result)
+
+#3つの数字を引数として受け取り、それらを掛け算して結果を戻り値として返す関数 multiply_three_numbers を作りましょう。
+#その関数を呼び出して、戻り値をターミナルに出力してください。呼び出すときは、2 と 3 と 4 を使ってください。
+def multiply_three_number(a,b,c):
+    get_answer = a * b * c
+    return get_answer
+
+get_answer_result = multiply_three_number(2,3,4)
+print(get_answer_result)
+
+#2つの引数 item（商品名）と price（価格）を受け取り、f文字列を使って「{item} の価格は {price} 円です。」という文を作る関数 display_price を作成してください。
+def display_price(item,price):
+    price_comment = f'{item}の価格は{price}円です。'
+    return price_comment
+
+price_comment_result = display_price("りんご",150)
+print(price_comment_result)
+
+#2つの引数 city（都市名）と temperature（気温）を受け取り、f文字列を使って「今日の {city} の気温は {temperature} 度です。」という文を作る関数 report_weather を作成してください。
+def report_weather(city,temperature):
+    weather_message = f'今日の{city}の気温は{temperature}度です。'
+    return weather_message
+    
+weather_message_result = report_weather("東京",25)
+print(weather_message_result)
+
+#数字のリスト numbers = [1, 2, 3] があります。複数の数字をまとめて受け取り、すべてリストに追加する関数 add_numbers(new_numbers) を作ってください。
+#関数を使って [4, 5, 6] を追加し、リストの中身をすべて表示してください。
+numbers = [1,2,3]
+def add_numbers(new_number):
+    for number in new_number:
+        numbers.append(number)
+
+add_numbers([4, 5, 6])
+for number in numbers:
+    print(number)
+    
+    
+numbers = [1,2,3]
+def add_numbers(new_number):
+    for number in new_number:
+        numbers.append(number)
+    return numbers
+
+result = add_numbers([4, 5, 6])
+print(result)
+
+#色のリスト colors = ["赤", "青"] があります。複数の色をまとめて受け取り、すべてリストに追加する関数 add_colors(new_colors) を作ってください。
+#関数を使って ["黄色", "緑"] を追加し、リストの中身をすべて表示してください。
+colors =  ["赤", "青"]
+def add_colors(new_colors):
+    for color in new_colors:
+        colors.append(color)
+        
+add_colors(["黄色", "緑"] )
+for color in colors:
+    print(color)
+    
+#このリストに新しい果物 ["orange", "grape"] を追加する関数 add_fruits を作ってください。
+# ただし、add_fruits 関数は新しいリストを返り値として返すようにしてください。元のリストは変更しないようにしましょう。
+fruits = ["apple", "banana"]
+def add_fruits(new_fruits):
+    for fruit in new_fruits:
+        fruits.append(fruit)
+    
+
+add_fruits(["orange", "grape"])
+for fruit in fruits:
+    print(fruit)
+    
+    
+friends = ["けん", "みか", "ゆうき"]
+def add_new_friends(new_friend):
+    for friend in new_friend:
+        friends.append(friend)
+        
+add_new_friends(["あかり", "りょうた"])
+
+for friend in friends:
+    print(friend)
+    
+    
+#消費税を計算するために、**すべての商品の値段を1.1倍（10%増し）**にして、新しいリストとして返す関数 add_tax(prices) を作ってください。
+# そして、その関数を使って prices リストの新しい値段を計算し、結果を画面に表示してください。
+prices = [100, 250, 80]
+def add_tax(prices):
+    new_prices_list = []
+    for price in prices:
+        tax_price = price * 1.1
+        new_prices_list.append(tax_price)
+    return new_prices_list
+
+tax_price_result = add_tax(prices)
+print(tax_price_result)
+
+#テストの点数が70点より低かったら10点追加して、新しいリストとして返す関数 improve_scores(scores) を作ってください。70点以上の場合は、そのままの点数にしてください。
+scores = [65, 80, 95]
+
+def improve_scores(scores):
+    new_scores_list = []
+    for score in scores:
+        if score < 70:
+            new_score = score + 10
+        else:
+            new_score = score
+        new_scores_list.append(new_score)
+    return new_scores_list
+
+improve_scores_result = improve_scores(scores)
+print(improve_scores_result)
+
+
+#複数の新しい動物の名前をまとめて受け取り、すべてリストに追加する関数 add_animals(new_animals) を作ってください。
+animals = ["いぬ", "ねこ", "うさぎ"]
+def add_animals(new_animals):
+    for animal in new_animals:
+        animals.append(animal)
+            
+add_animals(["きつね", "たぬき"] )
+for animal in animals:
+    print(animal)
