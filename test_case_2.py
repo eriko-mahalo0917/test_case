@@ -530,3 +530,125 @@ def add_animals(new_animals):
 add_animals(["くま", "パンダ"])
 for animal in animals:
     print(animal)
+
+
+# お皿に乗っているフルーツの値段のリストです
+prices = [100, 250, 80, 500]
+def add_tax(prices):
+    tax_included_prices = []
+    for price in prices:
+        tax_price = price * 1.1
+        tax_included_prices.append(tax_price)
+    return tax_included_prices
+
+tax_included_prices_result = add_tax(prices)
+print(tax_included_prices_result)
+
+
+# お客さんごとの買い物リストです
+shopping_lists = [["牛乳", "パン"], ["りんご", "バナナ", "いちご"], ["卵", "チーズ"]]
+def add_customer(shopping_lists):
+    shopping_lists.append(["オレンジ", "ブロッコリー"])
+        
+add_customer(shopping_lists)
+print(shopping_lists)
+
+
+## お店の商品の値段のリストです
+prices = [1500, 2000, 3500, 500]
+
+def apply_discount(prices):
+    sale_prices = []
+    
+    for price in prices:
+        final_price = price * 0.7
+        sale_prices.append(final_price)
+    return sale_prices
+
+apply_discount_result = apply_discount(prices)
+print(apply_discount_result)
+
+
+
+def fruits_list(new_fruit_list):
+    fruits = []
+    for fruit in new_fruit_list:
+        fruits.append(fruit)
+    return fruits
+
+new_fruit_list_result = fruits_list(['りんご','バナナ','いちご','メロン'])
+print(new_fruit_list_result)
+
+
+
+#新しいリストに追加する場合
+def animals_list(new_animal_list):
+    animals = []
+    for animal in new_animal_list:
+        animals.append(animal)
+    return animals
+
+animal_list_result = animals_list(['ねこ','いぬ','うさぎ','きつね'])
+print(animal_list_result)
+
+
+#復習①
+# お皿に乗っているフルーツの値段のリストです
+prices = [100, 250, 80, 500]
+def add_tax(prices):
+    add_tax_list = []
+    for price in prices:
+        final_price = price * 1.1
+        add_tax_list.append(final_price)
+    return add_tax_list
+
+add_tax_result = add_tax(prices)
+print(add_tax_result)
+
+#いくつかの新しいフルーツをまとめて受け取り、お皿のリストにすべて追加する関数 add_fruits(new_fruits) を作ってください。この関数を使って、["バナナ", "ぶどう"] をお皿のリストに追加してください。
+#すべてのフルーツを追加したあと、お皿のリストの中身をすべて表示してください。
+
+fruits = ["りんご", "みかん", "いちご"]
+def add_fruits(new_fruits):
+    for fruit in new_fruits:
+        fruits.append(fruit)
+        
+add_fruits(["バナナ", "ぶどう"])
+print(fruits)
+
+
+#上記のリストのすべての値段を30%引きにした新しいリストとして返す関数 apply_discount(prices) を作成してください。この関数を使って、割引後のリストを変数 sale_prices に代入し、そのリストの中身をすべて表示してください。
+# お店の商品の値段のリストです
+prices = [1500, 2000, 3500, 500]
+def apply_discount(prices):
+    sale_prices = []
+    for price in prices:
+        final_price = price * 0.7
+        sale_prices.append(final_price)
+    
+    return sale_prices
+
+sale_prices_result = apply_discount(prices)
+print(sale_prices_result)
+
+
+#リストに追加
+# お皿に乗ったフルーツのリストです
+fruits = ["りんご", "みかん", "いちご"]
+def add_fruits(new_fruits):
+    for fruit in new_fruits:
+        fruits.append(fruit)
+        
+add_fruits(["バナナ", "ぶどう"])
+for fruit in fruits:
+    print(fruit)
+    
+    
+    
+fruits = ["りんご", "みかん", "いちご"]
+def add_fruits(new_fruits):
+    for fruit in new_fruits:
+        fruits.append(fruit)
+        
+add_fruits(["バナナ", "ぶどう"])
+print(fruits)
