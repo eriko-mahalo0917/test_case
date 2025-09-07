@@ -486,3 +486,47 @@ def online_price(price):
     
 online_price_result = online_price(7500)
 print(online_price_result)
+
+#「Good morning!」と表示する関数 say_good_morning を定義し、それを呼び出してください。
+def say_good_morning():
+    print('Good morning!')
+    
+say_good_morning()
+
+#2つの数字を引数として受け取り、それらを足し算して結果を戻り値として返す関数を作りましょう。その関数を呼び出して、戻り値をターミナルに出力してください。
+def add_numbers(x,y):
+    final_answer = x + y
+    return final_answer
+
+add_numbers_result = add_numbers(10,20)
+print(add_numbers_result)
+
+
+#2つの引数 item（品物名）と price（価格）を受け取り、f文字列（f-string）を使って次のような商品情報を表示する関数を作成してください。「○○は、□□円です。」
+def buy_items(item,price):
+    message = f'{item}は、{price}円です。'
+    return message
+    
+buy_item_message = buy_items('シャインマスカット',5000)
+print(buy_item_message)
+
+# お皿に乗ったフルーツのリストです
+fruits = ["りんご", "みかん", "いちご"]
+def add_fruits(new_fruits):
+    for fruit in new_fruits:
+        fruits.append(fruit)
+
+add_fruits(["バナナ", "ぶどう"])
+for fruit in fruits:
+    print(fruit)
+    
+
+# おもちゃ箱に入っている動物のリストです
+animals = ["ねこ", "いぬ", "うさぎ"]
+def add_animals(new_animals):
+    for animal in new_animals:
+        animals.append(animal)
+        
+add_animals(["くま", "パンダ"])
+for animal in animals:
+    print(animal)
