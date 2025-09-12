@@ -652,3 +652,80 @@ def add_fruits(new_fruits):
         
 add_fruits(["バナナ", "ぶどう"])
 print(fruits)
+
+#復習
+#「Pythonは楽しい！」と表示する関数 fun_python を定義して、それを呼び出してください。
+def fun_python():
+    print("Pythonは楽しい！")
+    
+    
+fun_python()
+
+#2つの数字を引数として受け取り、それらを足し算して結果を戻り値として返す関数を作りましょう。その関数を呼び出して、戻り値をターミナルに出力してください。
+#結果は return を使って返してください。・関数の呼び出し例では、10 と 20 を使ってください。・ターミナルへの出力には print() を使ってください。
+
+def add_numbers(x,y):
+    add_answer = x + y
+    return add_answer
+
+
+add_answer_result = add_numbers(10,20)
+print(add_answer_result)
+
+#3つの引数 item（商品名）と price（値段）と quantity（数量）を受け取り、f文字列（f-string）を使って「〇〇の合計金額は△△円です。」という文を作る関数を作成してください。関数を呼び出して、その文をターミナルに出力してください。
+
+def add_price(item,price,quantity):
+    final_price = price * quantity
+    message = f'{item}の合計金額は{final_price}円です'
+    return message
+
+
+add_price_result = add_price("シャインマスカット",1200,2)
+print(add_price_result)
+
+#復習
+books = ["ハリー・ポッター", "指輪物語"]
+
+def add_books(new_books):
+    for book in new_books:
+        books.append(book)
+    
+add_books(["ナルニア国物語", "ホビットの冒険"])
+
+#横の出力：手軽な確認。自分自身が開発中に中身を素早くチェックするためのデバッグに向いてい
+print(books)
+
+
+books = ["ハリー・ポッター", "指輪物語"]
+
+def add_books(new_books):
+    for book in new_books:
+        books.append(book)
+    
+add_books(["ナルニア国物語", "ホビットの冒険"])
+
+#縦の出力：丁寧な表示。ユーザーや他者に見せるための、最終的な出
+for book in books:
+    print(book)
+    
+#復習    
+fruits = ["りんご", "バナナ", "いちご"]
+
+def reverse_list(my_list):
+    my_list.reverse()
+    
+reverse_list(fruits)
+for fruit in fruits:
+    print(fruit)
+    
+#復習
+stores = ["コンビニ", "スーパー"]
+
+def add_stores(new_stores):
+    for store in new_stores:
+        stores.append(store)
+        
+        
+add_stores(["ドラッグストア", "ホームセンター"])
+for store in stores:
+    print(store)
