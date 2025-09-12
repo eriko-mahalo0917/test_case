@@ -268,3 +268,272 @@ original_text = "tuesday"
 #メソッドを呼び出して出力する
 print(text_editor_instance.to_upper(original_text))
 print(text_editor_instance.slice_and_reverse(original_text))
+
+#練習問題
+class TextEditor:
+    #メソッド
+    def to_upper(self,text):
+        upper_text = text.upper()
+        return upper_text
+    
+    def slice_and_reverse(self,text):
+        slice_and_reverse_text = text[1::-3]
+        return slice_and_reverse_text
+    
+#インスタンスを作成
+text_editor_instance = TextEditor()
+
+#変数へ変更する言葉を代入
+original_text = "Pneumonoultramicroscopicsilicovolcanoconiosis"
+
+#メソッドを実行して出力
+print(text_editor_instance.to_upper(original_text))
+print(text_editor_instance.slice_and_reverse(original_text))
+
+#ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+#【自分だけで解いた解答】
+#クラスを作る
+class Calculator:
+    #メソッド①
+    def add(self,x,y):
+        add_answer = x + y
+        return add_answer
+    
+    #メソッド②
+    def double_x(self,x):
+        double_x_answer = x * 2
+        return double_x_answer
+    
+    
+#インタンスを作る
+calculator_instance = Calculator()
+
+#add_resultで戻り値を受け取って、メソッドを実行
+add_result = calculator_instance.add(3,5)
+print(add_result)
+
+#double_x_answer_resultで戻り値を受け取って、メソッドを実行
+double_x_answer_result = calculator_instance.double_x(3)
+print(double_x_answer_result)
+
+
+
+#【AIを利用して修正した解答】
+#クラスを作る
+class Calculator:
+    #メソッド①　３行構成
+    def add(self,x,y):
+        add_answer = x + y
+        return add_answer
+    
+    #メソッド②　３行構成
+    def double_x(self,x):
+        double_x_answer = x * 2
+        return double_x_answer
+    
+    
+#インタンスを作る
+calculator_instance = Calculator()
+
+#数字を変数へ代入する
+x_num = 3
+y_num = 5
+
+#add_resultで戻り値を受け取って、メソッドを実行　名前=値 の形で渡すことが、キーワード引数ということ！
+add_result = calculator_instance.add(x=x_num,y=y_num)
+print(add_result)
+
+#double_x_answer_resultで戻り値を受け取って、メソッドを実行　名前=値 の形で渡すことが、キーワード引数ということ！
+double_x_answer_result = calculator_instance.double_x(x=x_num)
+print(double_x_answer_result)
+
+
+#【引数とキーワード引数を同じにした修正した解答】
+#クラスを作る
+class Calculator:
+    #メソッド①　３行構成
+    def add(self,x_num,y_num):
+        add_answer = x_num + y_num
+        return add_answer
+    
+    #メソッド②　３行構成
+    def double_x(self,x_num):
+        double_x_answer = x_num * 2
+        return double_x_answer
+    
+    
+#インタンスを作る
+calculator_instance = Calculator()
+
+#数字を変数へ代入する
+x_num = 3
+y_num = 5
+
+#add_resultで戻り値を受け取って、メソッドを実行　名前=値 の形で渡すことが、キーワード引数ということ！
+add_result = calculator_instance.add(x_num,y_num)
+print(add_result)
+
+#double_x_answer_resultで戻り値を受け取って、メソッドを実行　名前=値 の形で渡すことが、キーワード引数ということ！
+double_x_answer_result = calculator_instance.double_x(x_num)
+print(double_x_answer_result)
+
+#練習
+#クラスを作る
+class Calculator:
+    #メソッド①の第一引数にはself
+    def add(self,x_num,y_num):
+        add_answer = x_num + y_num
+        return add_answer
+    
+    #メソッド②
+    def double_x(self,x_num):
+        double_x_answer = x_num * 2
+        return double_x_answer
+    
+#インスタンスを作成する
+calculator_instance = Calculator()
+
+#キーワード引数へ代入
+x_num = 3
+y_num = 5
+
+#メソッドを呼び出して出力
+add_result = calculator_instance.add(x_num,y_num)
+print(add_result)
+
+double_x_answer_result = calculator_instance.double_x(x_num)
+print(double_x_answer_result)
+
+#類似問題
+class Box:
+    def get_volume(self,length,width,height):
+        volume = length * width * height
+        return volume
+    
+    
+    def get_surface_area(self,length,width,height):
+        surface_area  = 2 * (length * width + width * height + height * length)
+        return surface_area
+
+#インスタンス作成
+box_instance = Box()
+
+#数を代入
+length = 10
+width = 5
+height = 3
+
+#メソッドを呼び出す
+volume_result = box_instance.get_volume(length,width,height)
+print(volume_result)
+
+surface_ara_result = box_instance.get_surface_area(length,width,height)
+print(surface_ara_result)
+
+#練習問題
+#クラスを作る
+class Geometry:
+    #メソッド① get_circle_area(): 半径（radius）を使った円の面積
+    def get_circle_area(self,radius):
+        area = radius * radius * 3.14
+        return area
+    
+    #メソッド② 一辺の長さ（side）を使った正方形の周りの長さ
+    def get_square_perimeter(self,side):
+        perimeter = side * 4
+        return perimeter
+    
+    
+#インダンスを作成
+geometry = Geometry()
+
+#数を代入
+radius = 10
+side = 5
+
+#メソッドを呼び出して実行&出力
+area_result = geometry.get_circle_area(radius)
+print(area_result)
+
+perimeter_result = geometry.get_square_perimeter(side)
+print(perimeter_result)
+
+#練習　Arithmetic クラスを定義してください。
+class Arithmetic:
+    #メソッド①
+    def subtract(self,x_num,y_num):
+        #x - y の結果を result に入れて、それを返す
+        ans_subtract = x_num - y_num
+        return ans_subtract
+    
+    #メソッド② t
+    def triple_y(self,y_num):
+        #triple_y()：y * 3 の結果を result に入れて、それを返す。
+        triple_y_ans = y_num * 3
+        return triple_y_ans
+    
+#インスタンスを作成
+arithmetic_instance = Arithmetic()
+
+#キーワード引数へ代入
+x_num = 10
+y_num = 4
+
+#メソッドを呼び出す
+ans_subtract_result = arithmetic_instance.subtract(x_num,y_num)
+print(ans_subtract_result)
+
+triple_y_ans_result = arithmetic_instance.triple_y(y_num)
+print(triple_y_ans_result)
+
+
+#Converter クラスを定義してください。
+class Converter:
+    #メソッド①　multiply()：a * b の結果を result に入れて、それを返す。
+    def multiply(self,a_num,b_num):
+        ans_multiply = a_num * b_num
+        return ans_multiply
+    
+    #メソッド②　half_a()：a / 2 の結果を result に入れて、それを返す。
+    def half_a(self,a_num):
+        ans_half_a = a_num / 2
+        return ans_half_a
+    
+#インタンスを作成する
+converter = Converter()
+
+#数字を代入する
+a_num = 20
+b_num = 5
+
+#returnを受け取ってメソッドを呼び出して出力する
+ans_multiply_result = converter.multiply(a_num,b_num)
+print(ans_multiply_result)
+
+ans_half_a_result = converter.half_a(a_num)
+print(ans_half_a_result)
+
+#Geometry クラスを定義してください。
+class Geometry:
+    #メソッド①　get_area()：length * width の結果を result に入れて、それを返す。
+    def get_rectangle_area(self,length,width):
+        get_area_ans = length * width
+        return get_area_ans
+    
+    #メソッド②　get_perimeter_sum()：length + width の結果を result に入れて、それを返す。
+    def get_perimeter_sum(self,length,width):
+        get_sum_ans = length + width
+        return get_sum_ans
+    
+#インスタンスを作成
+geometry = Geometry()
+#数を代入
+length = 8
+width = 6 
+
+#メソッドを呼び出す
+get_area_ans_result = geometry.get_rectangle_area(length,width)
+print(get_area_ans_result)
+
+get_sum_ans_result = geometry.get_perimeter_sum(length,width)
+print(get_sum_ans_result)
