@@ -729,3 +729,349 @@ def add_stores(new_stores):
 add_stores(["ドラッグストア", "ホームセンター"])
 for store in stores:
     print(store)
+    
+#復習
+#「おやすみなさい！」と表示する関数 say_goodnight を定義し、それを呼び出してください。
+def say_goodnight():
+    print("おやすみなさい！")
+    
+    
+say_goodnight()
+
+#2つの数字を引数として受け取り、それらを足し算して結果を戻り値として返す関数を作りましょう。その関数を呼び出して、戻り値をターミナルに出力してください。
+def add_numbers(x,y):
+    ans_add_numbers = x + y
+    return ans_add_numbers
+
+ans_add_numbers_result = add_numbers(10,8)
+print(ans_add_numbers_result)
+
+#ペットの種類 pet_type と名前 pet_name を引数として受け取り、f文字列（f-string）を使って自己紹介文を作る関数を作成してください。
+def introduce_pet(pet_type,pet_name):
+    message = f'うちのペットは{pet_type}で、名前は{pet_name}です。'
+    return message
+
+
+message_result = introduce_pet("ポメラニアン","もっくん")
+print(message_result)
+
+#次の数値リストがあります。numbers = [10, 20, 30]
+#複数の数値をまとめて受け取り、すべてリストに追加する関数 add_numbers_to_list(new_numbers) を作ってください。
+#この関数を使って [40, 50, 60] をリストに追加し、最終的なリストの中身をすべて表示してください。
+numbers = [10,20,30]
+
+def add_numbers_to_list(new_numbers):
+    for number in new_numbers:
+        numbers.append(number)
+        
+add_numbers_to_list([40, 50, 60])
+for number in numbers:
+    print(number)
+    
+    
+#次のリストの各数値を2乗（同じ数を2回掛ける）して、その結果を新しいリストとして返す関数 square_list(numbers) を作成してください。
+numbers = [2, 4, 6, 8]
+def square_list(numbers):
+    new_square_list = []
+    for number in numbers:
+        ans_square_number = number * number
+        new_square_list.append(ans_square_number)
+    
+    return new_square_list
+    
+    
+ans_square_number_result = square_list(numbers)
+print(ans_square_number_result)
+
+#次のリストの各数値を2で割り、その結果を新しいリストとして返す関数 halve_list(numbers) を作成してください。
+numbers = [10, 20, 30, 40]
+
+def halve_list(numbers):
+    new_half_list = []
+    for number in numbers:
+        ans_new_half_list = number / 2
+        new_half_list.append(ans_new_half_list)
+    
+    return new_half_list
+
+new_half_list_result = halve_list(numbers)
+print(new_half_list_result)
+
+#次のリストにある各都市名の文字数を数え、その結果を新しいリストとして返す関数 get_name_lengths(names) を作成してください。
+cities = ["Tokyo", "Osaka", "Fukuoka"]
+
+def get_name_lengths(names):
+    new_cities_count_list = []
+    for city in names:
+        city_count = len(city)
+        new_cities_count_list.append(city_count)
+        
+    return new_cities_count_list
+
+
+new_cities_count_list_result = get_name_lengths(cities)
+print(new_cities_count_list_result)
+
+
+#次のリストの各動物の名前の文字数を数え、その結果を新しいリストとして返す関数 count_letters(items) を作成してください。
+
+animals = ["cat", "dog", "elephant"]
+def count_letters(items):
+    #新しいリストを準備
+    animal_count_list = []
+    #animalは自分で作った引数になって、それはアイテムに入っている１つずつを取ってくる
+    for animal in items:
+        #アイテムに入ってきた言葉をカウントする
+        animal_count = len(animal)
+        #あたらしいリストに文字数を追加していく
+        animal_count_list.append(animal_count)
+        
+    return animal_count_list
+
+
+animal_count_list_result = count_letters(animals)
+print(animal_count_list_result)
+
+
+#次のリストにある各単語をすべて大文字に変換し、その結果を新しいリストとして返す、再利用可能な関数 convert_to_uppercase(words) を作成してください。
+greetings = ["hello", "world", "python"]
+
+def convert_to_uppercase(words):
+    new_upper_list = []
+    for greeting in words:
+        upper_word = greeting.upper()
+        new_upper_list.append(upper_word)
+        
+    return new_upper_list
+
+new_upper_list_result = convert_to_uppercase(greetings)
+print(new_upper_list_result)
+
+
+#次のリストの名前の末尾に「さん」という敬称を追加し、その結果を新しいリストとして返す関数 add_honorifics(names) を作成してください。
+names = ["たなか", "すずき", "さとう"]
+
+def add_honorifics(names):
+    new_names_list = []
+    for name in names:
+        name_san = name + "さん"
+        #新しいリストの後ろから１つずつ「さん」付けを追加していく
+        new_names_list.append(name_san) 
+        
+    return new_names_list
+
+new_names_list_result = add_honorifics(names)
+print(new_names_list_result)
+
+#以下のリストを使って、すべての名前を1つずつ表示する print_names() 関数を作ってください。
+names = ["たろう", "はなこ", "じろう"]
+
+def print_names(name):
+    for name in names:
+        print(name)
+        
+
+print_names(names)
+
+
+#以下のリストを使って、すべての果物の名前を1つずつ大文字で表示する print_fruits_upper() 関数を作ってください。
+fruits = ["apple", "banana", "cherry"]
+
+def print_fruits_upper(fruits):
+    new_upper_list = []
+    for fruit in fruits:
+        upper_list = fruit.upper()
+        new_upper_list.append(upper_list)
+    
+    return new_upper_list
+    
+upper_list_result = print_fruits_upper(fruits)
+print(upper_list_result)
+
+
+#以下のリストを使って、すべての果物の名前を1つずつ大文字で表示する print_fruits_upper() 関数を作ってください。
+fruits = ["apple", "banana", "cherry"]
+
+def print_fruits_upper(fruits):
+    for fruit in fruits:
+        print(fruit.upper())
+        
+print_fruits_upper(fruits)
+
+
+#以下のリストを使って、すべての教科を1つずつ表示する print_subjects() 関数を作ってください。subjects = ["国語", "数学", "理科", "社会"]
+subjects = ["国語", "数学", "理科", "社会"]
+
+def print_subjects(subjects):
+    #一つずつリストから取り出す
+    for subject in subjects:
+        print(subject)
+        
+print_subjects(subjects)
+
+#関数を作る
+def number_list(number_list):
+    #空のリ空のリスト numbers を用意
+    numbers = []
+    #for 文を使ってnumber_listから数字を順に取得し、1つずつリストに追加
+    for number in number_list:
+        numbers.append(number)
+        
+    return numbers
+
+numbers_result = number_list([1,2,3,4,5])
+print(numbers_result)
+
+
+#復習〜〜〜
+members = ["かずき", "ゆうき", "まなと"]
+
+def new_member(new_members):
+    #新しいリストから取り出して引数のmemberにいれる
+    for member in new_members:
+        #もとのリストに新しいメンバーを追加
+        members.append(member)
+        
+new_members = ["あおい", "ゆい", "けんと"]
+
+#新しいメンバーを追加
+new_member(new_members)
+#新しいリストを順番に取り出していく
+for member in members:
+    print(member)
+    
+    
+#もとのリストに追加して、新しいリストを作成    
+shopping_list = ["牛乳", "パン", "たまご"]
+
+def add_items(new_items):
+    #新しいリストから取り出して今あるリストへ追加する
+    for item in new_items:
+        shopping_list.append(item)
+        
+new_items = ["お菓子", "ジュース", "りんご"]
+
+#関数へ新しいアイテムを代入
+add_items(new_items)
+#新しくできたアイテムを１つずつ表示
+for item in shopping_list:
+    print(item)
+    
+    
+#もともとあったリストを3倍にして新しいリストを作る
+toys = [10, 20, 30, 40]
+
+def triple_toys(toys):
+    #関数の中で新しいリストを作成
+    new_toys_list = []
+    #もともとリストを１つずつ取り出して3倍にしていく
+    for toy in toys:
+        triple_toys = toy * 3
+        #新しいリストの中に3倍した結果を追加していく
+        new_toys_list.append(triple_toys)
+    #新しいリストを受け取るが、すべてを表示したあとに関数外で受け取る
+    return new_toys_list
+
+new_toys_list_result = triple_toys(toys)
+print(new_toys_list_result)
+
+
+#リストを一つずつ取り出して表示
+colors = ["あか", "あお", "きいろ"]
+
+def print_colors(colors):
+    for color in colors:
+        #取り出した色を出力するまでの関数にする
+        print(color)
+        
+#呼び出して色リストを表示
+print_colors(colors)
+
+
+#numbers という名前の、空のリストを最初に用意してください。　for 文を使って 10 から 50 までの数字を 10ずつ増やしながら 順に取得し、1つずつリストに追加してください。
+
+def print_numbers_list():
+    #からのリストを準備する
+    numbers = []
+    #新しいリストから取り出していく
+    for number in range(10,51,10):
+        #新しいリストに結果を追加していく
+        numbers.append(number)
+    #新しいリストを受け取るが、繰り返しはここでストップだから、関数外でreturn
+    return numbers
+
+print_numbers_list_result = print_numbers_list()
+print(print_numbers_list_result)
+    
+
+#年齢を引数として受け取り、18歳以上なら「大人です」、そうでなければ「未成年です」と表示する関数 check_age(age) を作ってください。
+def check_age(age):
+    if age >= 18:
+        return "大人です"
+    else:
+        return "未成年です"
+        
+age_result = check_age(20)        
+print(age_result)
+
+age_result = check_age(15)
+print(age_result)
+
+
+#点数を引数として受け取り、次の条件で判定する関数 judge_score(score) を作ってください。・80点以上 → 「優秀です」・60点以上80点未満 → 「合格です」・60点未満 → 「不合格です」
+def judge_score(score):
+    #表示する言葉を引数で準備する
+    very_good_score = "優秀です"
+    good_score = "合格です"
+    bad_score = "不合格です"
+    
+    if score >= 80:
+        return very_good_score
+    elif score >= 60:
+        return good_score
+    else:
+        return bad_score
+    
+judge_score_result = judge_score(100)
+print(judge_score_result)
+
+
+#今日の気温を判定してみよう。judge_temperature(temp) という名前の関数を作って、引数として気温（temp）を受け取ってください。
+def judge_temperature(temp):
+    hot_temp = "暑いです"
+    normal_temp = "過ごしやすいです"
+    cold_temp ="寒いです"
+    
+    if temp >= 30:
+        return hot_temp
+    elif temp >= 20:
+        return normal_temp
+    else:
+        return cold_temp
+    
+judge_temperature_result = judge_temperature(25)
+print(judge_temperature_result)
+
+
+#購入金額を引数として受け取り、条件に応じて割引の有無を判定する関数 check_discount(price) を作ってください。
+#・10000円以上 → 「20%割引」
+#・5000円以上10000円未満 → 「10%割引」
+#・5000円未満 → 「割引なし」
+
+def check_discount(price):
+    twenty_off_comment = "20%割引"
+    ten_off_comment = "10%割引"
+    proper_price_comment = "割引なし"
+    
+    if price >= 10000:
+        final_price = int(price * 0.8)
+        return f'{twenty_off_comment},{final_price}円です。'
+    elif price >= 5000:
+        final_price = int(price * 0.9)
+        return f'{twenty_off_comment},{final_price}円です'
+    else:
+        final_price = int(price)
+        return f'{proper_price_comment},{final_price}円です。'
+    
+price_result = check_discount(10000)
+print(price_result)
