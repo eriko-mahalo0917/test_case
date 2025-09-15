@@ -537,3 +537,151 @@ print(get_area_ans_result)
 
 get_sum_ans_result = geometry.get_perimeter_sum(length,width)
 print(get_sum_ans_result)
+
+
+#ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+#復習
+
+class TextFormatter:
+    #メソッド① 小文字にする
+    def to_lower(self,text):
+        to_lower_text = text.lower()
+        return to_lower_text
+    
+    #メソッド② スペースで区切って、単語のリストにして返す
+    def split_text(self,text):
+        get_split_text = text.split()
+        return get_split_text
+    
+#インスタンスを作成
+text_formatter = TextFormatter()
+
+#引数に単語を代入する
+my_text = 'Python Programming'
+
+#メソッドを呼び出して出力する
+to_lower_text_result = text_formatter.to_lower(my_text)
+print(to_lower_text_result)
+
+get_split_text_result = text_formatter.split_text(my_text)
+print(get_split_text_result)
+
+
+#クラスを作る
+class TextEditor:
+    #メソッド①大文字にする
+    def to_upper(self,text):
+        to_upper_text = text.upper()
+        return to_upper_text
+    
+    #メソッド②逆から①文字ずつ
+    def reverse_text(self,text):
+        get_reverse_text = text[::-1]
+        return get_reverse_text
+    
+#インスタンスを作成
+text_editor_instance = TextEditor()
+
+#文字を引数に代入
+original_text = "happy birthday"
+
+#メソッドを呼び出して出力する
+to_upper_text_result = text_editor_instance.to_upper(original_text)
+print(to_upper_text_result)
+
+get_reverse_text_result = text_editor_instance.reverse_text(original_text) 
+print(get_reverse_text_result)
+
+
+#【問題文】
+#【要件】Calculator クラスを定義してください。・クラスには次の2つのメソッドを定義してください（どちらも3行構成）：
+#1.add（）：x＋yの結果を変数 resultに入れて、それを返す
+#2.double_x（：x*2の結果を変数 resultに入れて、それを返す
+#・クラスの外でメ=3、y=5を定義し、各メソッドの結果を print（）で表示してください。※キーワード引数を使って定義してください。・init （コンストラクタ）に関しては利用なし (pass)
+
+class Calculator:
+    #メソッド①第一引数はself
+    def add(self,x_num,y_num):
+        add_answer = x_num + y_num
+        return add_answer
+    
+    #メソッド② 第一引数はself キーワード引数を同じにする
+    def double_x(self,x_num):
+        double_x_answer = x_num * 2
+        return double_x_answer
+    
+#インスタンスを作成
+calculator_instance = Calculator()
+#数字を引数へ代入
+x_num = 3
+y_num = 5
+
+#メソッドを呼び出して出力する
+add_answer_result = calculator_instance.add(x_num,y_num)
+print(add_answer_result) 
+
+double_x_answer_result = calculator_instance.double_x(x_num)
+print(double_x_answer_result)
+
+#TextEditor クラスを作ってください。下記の内容を反映させた次の2つのメソッドを定義してインスタンスを作成し、それぞれのメソッドを呼び出して結果を出力してください。
+#・to_upper(text)：文字列 text を大文字に変換して返すメソッド
+#・reverse_text(text)：文字列 text を逆順にして返すメソッド
+
+#クラスを作成する
+class TextEditor:
+    #メソッド①
+    def to_upper(self,text):
+        #大文字にするよ
+        upper_text = text.upper()
+        return upper_text
+    
+    #メソッド②
+    def reverse_text(self,text):
+        get_reverse_text = text[::-1]
+        return get_reverse_text
+    
+#インスタンスを作成
+text_editor_instance = TextEditor()
+#textへ代入
+text = "happy_birthday"
+
+#メソッドを呼び出して出力
+upper_text_result = text_editor_instance.to_upper(text)
+print(upper_text_result)
+
+get_reverse_text_result = text_editor_instance.reverse_text(text)
+print(get_reverse_text_result)
+
+#------------------------------------------------------------------------
+#【課題】Product クラスを作ってください。
+#・コンストラクタ（__init__）で name（商品名）と stock（在庫数）を受け取り、インスタンス変数に保存する
+#・add_stock(amount) メソッドで在庫を amount 増やす
+#・show_stock() メソッドで 「〇〇の在庫は△△個です」と表示する　インスタンスを作成し、在庫を追加して表示してください。
+
+class Product:
+    #コンストラクタはインスタンスを作成したと同時に呼び出される場所！通常のメソッドは呼び出さないと出てこないやつ！
+    def __init__(self,name,stock):
+        #ただの商品名をお店の実際の商品名で呼び出しているみたいな？
+        self.name = name
+        #ただの在庫数をお店の在庫数にするみたいな？
+        self.stock = stock
+    
+    #在庫を追加するメソッド
+    def add_stock(self,amount):
+        self.stock = self.stock + amount
+        print(f'{self.name}の在庫を{amount}増やしました。')
+        
+    #在庫を表示するメソッド
+    def show_stock(self):
+        print(f"{self.name} の在庫は {self.stock} 個です。")
+        
+#インスタンスを作成する　現在の在庫
+product_instance = Product("ハニーチュロ",100)
+
+product_instance.show_stock()
+
+#在庫を追加
+product_instance.add_stock(10)
+
+# 在庫を追加した後の在庫を表示
+product_instance.show_stock()
