@@ -224,3 +224,122 @@ student_instance.celebrate_birthday()
 #現状を呼び出す
 student_instance.show_info()
 
+
+
+#【類似問題】
+#Book クラスを作成してください。
+class Book:
+    #コンストラクタ（__init__）: title（本のタイトル）と price（価格）を受け取り、インスタンス変数に保存
+    def __init__(self,title,price):
+        #インスタンスから受け取ったデータを変数へ代入するとこ
+        self.title = title
+        self.price = price
+        
+    #メソッド①　display_info() メソッド: 「〇〇（タイトル）は△△円です。」と表示します。
+    def display_info(self):
+        print(f'{self.title}は{self.price}円です。')
+        
+    #メソッド②　apply_discount(rate) メソッド: 引数として rate（割引率、0.1なら10%）を受け取り、価格を更新
+    def apply_discount(self,rate):
+        self.price = self.price * (1 - rate)
+        
+#インスタンスを作成し、初期情報を表示した後、割引を適用して再度情報を表示してください。
+book_instance = Book('夢見るゾウ',50000)
+#メソッドを呼び出して出力
+book_instance.display_info()
+#割引率を指定する
+book_instance.apply_discount(0.5)
+book_instance.display_info()
+
+
+
+#【練習問題】
+#Dog クラスを作成してください。
+class Dog():
+    #コンストラクタ（__init__）: name（犬の名前）と breed（犬種）を受け取り、インスタンス変数に保存
+    def __init__(self,name,breed):
+        #インスタンスから受け取ったデータを変数へ代入するとこ
+        self.name = name
+        self.breed = breed
+        
+    #メソッド①bark() メソッド: 「ワンワン！と〇〇（名前）は吠えました。」と表示します。
+    def bark(self):
+        print(f'ワンワン！と{self.name}は吠えました。')
+        
+    #メソッド②change_breed(new_breed) メソッド: 引数として new_breed（新しい犬種）を受け取り、犬種を更新
+    def change_breed(self,new_breed):
+        self.breed = new_breed
+        
+    #表示する用のメソッド
+    def show_dog_info(self):
+        print(f'犬の種類：{self.breed}です。')
+        
+#実行: インスタンスを作成し、吠えさせた後、犬種を変更して再度吠えさせてみましょう。
+dog_instance = Dog('ポニー','柴犬')
+
+#メソッドを呼び出して出力
+dog_instance.bark()
+#犬の種類を教える
+dog_instance.show_dog_info()
+#犬の種類を更新する
+dog_instance.change_breed('ブルドッグ')
+#もう一度吠えさせる
+dog_instance.bark()
+#犬の種類を教える
+dog_instance.show_dog_info()
+
+
+#【練習用】
+#Circle クラスを作成してください。
+class Circle:
+    #コンストラクタ（__init__）: radius（半径）を受け取り、インスタンス変数に保存します。
+    def __init__(self,radius):
+        # インスタンスから受け取ったデータを変数へ代入する
+        self.radius = radius
+        
+    #メソッド①calculate_area() メソッド: 円の面積を計算し、「円の面積は〇〇です。」と表示します。円周率は3.14として計算してください。
+    def calculate_area(self):
+        ans_calculate_area = self.radius * 3.14
+        print(f'円の面積は{ans_calculate_area}cm²です。')
+        
+    #メソッド②calculate_circumference() メソッド: 円周を計算し、「円周は△△です。」と表示します。
+    def calculate_circumference(self):
+        ans_calculate_circumference = self.radius * self.radius * 3.14
+        print(f'円周は{ans_calculate_circumference}cmです。')
+        
+#実行: インスタンスを作成し、面積と円周をそれぞれ計算して表示してください。
+print(f'---円の計算---')
+circle = Circle(10)
+#メソッドを呼び出して出力：面積
+circle.calculate_area()
+# ソッドを呼び出して出力：円周
+circle.calculate_circumference()
+
+
+#【練習用】
+#Student クラスを作ってください。
+class Student:
+    #コンストラクタ（__init__）で name（生徒の名前）と score（点数）を受け取り、インスタンス変数に保存する
+    def __init__(self,name,score):
+        #インスタンスから受け取った値を代入にするための引数
+        self.name = name
+        self.score = score
+    
+    #メソッド①add_score(point) メソッドで点数に point を追加する
+    def add_score(self,point):
+        self.score = self.score + point
+        print(f'{point}点追加されます。')
+        
+    #メソッド②display_info() メソッドで「〇〇さんの現在の点数は△△点です」と表示する
+    def display_info(self):
+        print(f'{self.name}さんの現在の点数は{self.score}点です。')
+        
+
+#インスタンスを作成する
+student_instance = Student('パトリシア',40)
+#メソッドを呼び出して出力
+student_instance.display_info()
+#点数を追加
+student_instance.add_score(45)
+#もう一度現在の点数を表示
+student_instance.display_info()
