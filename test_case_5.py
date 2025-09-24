@@ -151,10 +151,77 @@ class JapaneseTranslator(Translator):
     #辞書をここで定義する
     WORDS = {"hello":"こんにちは","world":"世界"}
     
+    # ★修正1: メソッド名を "translate" に直す
     def translate(self, word):
         #辞書の翻訳があるのかゲットで呼ぶ
-        translation = self.WORD.get(word)
+        # ※前回のタイプミス self.WORDS も修正済み
+        translation = self.WORDS.get(word)
+        #もし、翻訳がみつかったら
+        if translation:
+            return translation
         
-        #
-        ans_word = super().translate(word)
-        return 
+        else:
+            # ★修正2: 呼び出すメソッド名も "translate" に直す
+            return super().translate(word)
+        
+# --- 実行部分 ---
+# インスタンスを作成
+translator = JapaneseTranslator()
+
+# "hello" を翻訳
+print(translator.translate("hello"))
+
+# "python" を翻訳
+print(translator.translate("python"))
+
+#＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+#getの練習
+#商品リストを作る
+drinks = {"cola": "コーラ", "tea": "お茶", "water": "水"}
+
+def get_drink(drink_code):
+    push_get_drink = drinks.get(drink_code)
+    #もしあればValueを呼び出す
+    if push_get_drink:
+        return push_get_drink
+    else:
+        return "売り切れです"
+    
+print(get_drink("tea"))
+print(get_drink("juice"))
+
+
+#＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+#会員IDを伝えると、現在のポイント残高を教えてくれるプログラムを作ります。
+#辞書を作成する
+
+point_balances = {"user001": 500, "user002": 1200, "user003": 80}
+point_balances["user004"] = 0
+
+#ポイント残高を確認する関数を作成する
+def check_points(user_id):
+    #ユーザーIDを探して、なければ会員ではありません
+    check_user = point_balances.get(user_id)
+    
+    if check_user is not None:
+        return check_user
+    
+    else:
+        return "会員ではありません"
+    
+print(check_points("user002"))
+print(check_points("user004"))
+
+#＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+#果物の名前を伝えると、その値段を教えてくれるプログラムを作ります
+#値段リストを作成
+
+prices = {"apple": 150, "banana": 100, "orange": 120}
+
+#値段を調べる関数を作る
+def get_price(fruit_name):
+    #辞書の中にあればそれを選んで、なければ取扱なし出力
+    return  prices.get(fruit_name, "その果物は取り扱っていません")
+
+print(get_price("apple"))
+print(get_price("grape"))
