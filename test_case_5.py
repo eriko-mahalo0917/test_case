@@ -225,3 +225,41 @@ def get_price(fruit_name):
 
 print(get_price("apple"))
 print(get_price("grape"))
+
+#===============================================================
+#チームの名簿を作る
+
+team_roles = {"Tanaka": "Leader", "Suzuki": "Engineer", "Sato": "Designer"}
+
+#関数を作成し、受け取った名前が名簿にあれば役職を、なければありません表記
+def find_role(name):
+    return team_roles.get(name, "チームメンバーではありません")
+
+#実行して確認
+print(find_role("Suzuki"))
+print(find_role("yamada"))
+
+
+#＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+#classバージョン
+#生徒のclassを作成
+
+class Student:
+    def __init__(self,name,score):
+        #受け取った名前を保存する
+        self.name = name
+        
+        #これから点数を入れる空っぽの辞書を用意
+        self.scores = {}
+        
+    #メソッド①点数を追加するメソッド
+    def add_score(self,subject,score):
+        # self.scores辞書に、subjectをキー、scoreを値として追加
+        self.scores[subject] = score
+        
+    #メソッド②　得点を取得する
+    def get_score(self,subject):
+        return self.score.get(subject, "まだその科目のテストは受けていません") 
+    
+
+#実行する
